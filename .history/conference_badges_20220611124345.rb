@@ -14,18 +14,8 @@ end
 #batch_badge_creator(attendees)
 
 def assign_rooms(attendees)
-    attendees.map.with_index(1) do |attendee, room|
-        "Hello, #{attendee}! You'll be assigned to room #{room}!"
+    attendees.each with_index(1) do |attendee, room|
+    p    "Hello, #{attendee}! You'll be assigned to room #{room}!"
     end
-end
-#assign_rooms(attendees)
 
-def printer(attendees)
-    batch_badge_creator(attendees).each do |badge|
-        puts badge
-    end
-    assign_rooms(attendees).each do |rooms|
-        puts rooms
-    end
 end
-printer(attendees)
